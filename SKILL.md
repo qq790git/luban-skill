@@ -88,7 +88,7 @@ description: 基于 DataBale/Luban 文档规则生成并校验真实 Excel（.xl
 - 若不存在 `Datas/__beans__.xlsx` 或 `Datas/__enums__.xlsx`，需创建并保持与模板一致。
 
 ### 6.5 三张系统表固定模板（强约束）
-- `.roo/skills/datable-excel-generator/template` 目录下的 `__beans__.xlsx`、`__enums__.xlsx`、`__tables__.xlsx` 是**唯一基准模板**。
+- `.claude/skills/luban-skill/template` 目录下的 `__beans__.xlsx`、`__enums__.xlsx`、`__tables__.xlsx` 是**唯一基准模板**。
 - 生成或维护这三张系统表时，必须以该目录中的同名模板为蓝本拷贝后再填充。
 - **禁止修改模板表头结构**：包括但不限于列名、列顺序、元信息行（如 `##var`、`##type`、`##group`、`##comment`）及其语义。
 - 仅允许在模板既有表头之下填入或更新数据行；不得新增、删除、重命名、重排表头列。
@@ -133,7 +133,7 @@ description: 基于 DataBale/Luban 文档规则生成并校验真实 Excel（.xl
 - 若出现 `type:'xxx' duplicate`，应优先检查是否同时启用了 bean 显式定义与 `read_schema_from_file=true`。
 
 ### 7.3 幂等生成规则（新增，强约束）
-- 每次生成前必须先用 `.roo/skills/datable-excel-generator/template` 下三张模板重置 `Datas/__beans__.xlsx`、`Datas/__enums__.xlsx`、`Datas/__tables__.xlsx`，再写入数据。
+- 每次生成前必须先用 `.claude/skills/luban-skill/template` 下三张模板重置 `Datas/__beans__.xlsx`、`Datas/__enums__.xlsx`、`Datas/__tables__.xlsx`，再写入数据。
 - 禁止在旧文件上直接追加而不清理，避免重复定义累积导致二次执行失败。
 
 ---
