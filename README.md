@@ -10,10 +10,10 @@
 > 将本仓库克隆到你的 .claude/skills/ 目录：
 
 
-    ```
-    cd ~/.claude/skills
-    git clone https://github.com/qq790git/luban-skill
-    ```
+```
+cd ~/.claude/skills
+git clone https://github.com/qq790git/luban-skill
+```
 
 2. 使用技能
 > 在 Claude Code 中输入 Luban 相关的问题即可触发技能：
